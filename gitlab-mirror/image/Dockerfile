@@ -30,4 +30,4 @@ RUN export PATH=$PATH:$GOROOT/bin && \
 USER 1001
 
 # Set the default CMD to print the usage of the language image
-CMD ["/opt/app-root/src/main"]
+CMD ["sh", "-c", "/opt/app-root/src/main"]

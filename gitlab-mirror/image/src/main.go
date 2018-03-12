@@ -117,5 +117,8 @@ func main() {
 	os.RemoveAll(destDir)
 
 	// Existing with 0 code to avoid re-swpan on k8s CronJobs
-	os.Exit(0)
+	//os.Exit(0)
+
+	// Run forever workaround for using k8s RC instead jobs
+	select {}
 }

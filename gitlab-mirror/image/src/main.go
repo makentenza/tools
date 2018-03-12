@@ -116,5 +116,6 @@ func main() {
 	// Remove directory used for cloning repositories
 	os.RemoveAll(destDir)
 
+	// Existing with 0 code to avoid re-swpan on k8s CronJobs
 	os.Exit(0)
 }

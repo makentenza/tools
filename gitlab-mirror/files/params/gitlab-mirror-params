@@ -1,0 +1,6 @@
+SOURCE_GITLAB_URL="https://mysrcgitlaburl.com"
+SOURCE_GITLAB_TOKEN="dheehqdsaklkfjoiewjroijewfk"
+SOURCE_GITLAB_USER="myuser"
+DEST_REPOSITORY="https://mydstgitlaburl/destrepo.git"
+DEST_GITLAB_TOKEN="ahsiuhcad7y3e3n3prjde"
+DEST_GITLAB_USER="myuser"

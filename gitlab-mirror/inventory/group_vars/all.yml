@@ -1,0 +1,8 @@
+---
+openshift_cluster_content:
+- object: deployments
+  content:
+  - name: gitlab-mirror
+    namespace: gitlab-mirror
+    template: "{{ inventory_dir }}/../files/templates/gitlab-mirror.yml"
+    params: "{{ inventory_dir }}/../files/params/gitlab-mirror-params"

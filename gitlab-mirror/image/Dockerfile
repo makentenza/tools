@@ -30,4 +30,4 @@ RUN export PATH=$PATH:$GOROOT/bin && \
 USER 1001
 
 # Set the default CMD to print the usage of the language image
-CMD sleep infinity
+CMD [./main]

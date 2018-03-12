@@ -77,43 +77,40 @@ objects:
               name: gitlab-secret
               key: source_gitlab_url
           - name: SOURCE_GITLAB_TOKEN
-              valueFrom:
-              secretKeyRef:
-                name: gitlab-secret
-                key: source_gitlab_token
+            valueFrom:
+            secretKeyRef:
+              name: gitlab-secret
+              key: source_gitlab_token
           - name: SOURCE_GITLAB_USER
             valueFrom:
             secretKeyRef:
               name: gitlab-secret
               key: source_gitlab_user
           - name: DEST_GITLAB_TOKEN
-              valueFrom:
-              secretKeyRef:
-                name: gitlab-secret
-                key: dest_gitlab_token
+            valueFrom:
+            secretKeyRef:
+              name: gitlab-secret
+              key: dest_gitlab_token
           - name: DEST_GITLAB_USER
             valueFrom:
             secretKeyRef:
               name: gitlab-secret
               key: dest_gitlab_user
           - name: DEST_REPOSITORY
-              valueFrom:
-              secretKeyRef:
-                name: gitlab-secret
-                key: dest_repository
+            valueFrom:
+            secretKeyRef:
+              name: gitlab-secret
+              key: dest_repository
           image: ' '
-          livenessProbe:
-            initialDelaySeconds: 30
-            timeoutSeconds: 1
           name: ${NAME}
     triggers:
     - imageChangeParams:
         automatic: true
         containerNames:
-        - postgresql
+        - gitlab-mirror
         from:
           kind: ImageStreamTag
-          name: ${NAME}
+          name: ${NAME}:latest
       type: ImageChange
     - type: ConfigChange
 parameters:

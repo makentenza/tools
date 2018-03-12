@@ -115,4 +115,6 @@ func main() {
 
 	// Remove directory used for cloning repositories
 	os.RemoveAll(destDir)
+
+	os.Exit(3)
 }

@@ -73,34 +73,34 @@ objects:
         - env:
           - name: SOURCE_GITLAB_URL
             valueFrom:
-            secretKeyRef:
-              name: gitlab-secret
-              key: source_gitlab_url
+              secretKeyRef:
+                name: gitlab-secret
+                key: source_gitlab_url
           - name: SOURCE_GITLAB_TOKEN
             valueFrom:
-            secretKeyRef:
-              name: gitlab-secret
-              key: source_gitlab_token
+              secretKeyRef:
+                name: gitlab-secret
+                key: source_gitlab_token
           - name: SOURCE_GITLAB_USER
             valueFrom:
-            secretKeyRef:
-              name: gitlab-secret
-              key: source_gitlab_user
+              secretKeyRef:
+                name: gitlab-secret
+                key: source_gitlab_user
           - name: DEST_GITLAB_TOKEN
             valueFrom:
-            secretKeyRef:
-              name: gitlab-secret
-              key: dest_gitlab_token
+              secretKeyRef:
+                name: gitlab-secret
+                key: dest_gitlab_token
           - name: DEST_GITLAB_USER
             valueFrom:
-            secretKeyRef:
-              name: gitlab-secret
-              key: dest_gitlab_user
+              secretKeyRef:
+                name: gitlab-secret
+                key: dest_gitlab_user
           - name: DEST_REPOSITORY
             valueFrom:
-            secretKeyRef:
-              name: gitlab-secret
-              key: dest_repository
+              secretKeyRef:
+                name: gitlab-secret
+                key: dest_repository
           image: ' '
           name: ${NAME}
     triggers:
